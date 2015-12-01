@@ -1,0 +1,33 @@
+# General ignores
+.DS_Store
+.idea
+*.iml
+*.log
+*.tgz
+node_modules
+
+# Aquifer
+.aquifer
+!.aquifer/.gitkeep
+
+# Builds
+artifacts/*
+!artifacts/.gitkeep
+build/*
+!build/.gitkeep
+
+# Files
+files/*
+!files/.gitkeep
+
+# Composer
+vendor
+
+# Settings
+settings.secret.php
+settings.local.php
+!circle/settings.secret.php
+
+# Drupal VM
+config.yml
+.vagrant

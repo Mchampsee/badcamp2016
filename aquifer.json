@@ -1,0 +1,29 @@
+{
+  "name": "BADCamp 2016",
+  "paths": {
+    "make": "drupal.make.yml",
+    "lock": false,
+    "settings": "settings",
+    "build": "build",
+    "root": "root",
+    "themes": {
+      "root": "themes/",
+      "contrib": "themes/contrib",
+      "custom": "themes/custom"
+    },
+    "modules": {
+      "root": "modules",
+      "contrib": "modules/contrib",
+      "custom": "modules/custom",
+      "features": "modules/features"
+    },
+    "profiles": {
+      "badcamp": "profiles/badcamp"
+    },
+    "files": {
+      "root": "files"
+    }
+  },
+  "extensions": {
+  }
+}
