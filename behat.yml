@@ -15,8 +15,7 @@ default:
       files_path: "%paths.base%/tests/sample_content"
       goutte: ~
       selenium2: ~
-      browser_name: firefox
-      base_url: http://bacamp2016.dev
+      base_url: http://badcamp2016.dev
       javascript_session: 'selenium2'
     Drupal\DrupalExtension:
       blackbox: ~
@@ -39,7 +38,7 @@ default:
 circle:
   extensions:
     Behat\MinkExtension:
-      base_url: http://badcamp2016:8080
+      base_url: http://badcamp2016.dev:8080
     Drupal\DrupalExtension:
       drupal:
         drupal_root: "/home/ubuntu/badcamp2016/build"
