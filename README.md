@@ -1,5 +1,7 @@
 # Bay Area Drupal Camp 2016
 
+Build status: ![CircleCI](https://circleci.com/gh/badcamp/badcamp2016.png)
+
 Local development uses [Drupal VM](http://www.drupalvm.com/).
 
 ## Dependencies
