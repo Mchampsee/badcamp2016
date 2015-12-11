@@ -97,8 +97,8 @@ $conf['date_default_timezone'] = 'America/Los_Angeles';
 // Disable Drupal's "poor man's cron".
 $conf['cron_safe_threshold'] = 0;
 
-// Disable user registration.
-$conf['user_register'] = 0;
+// Enable user registration.
+$conf['user_register'] = 1;
 
 // Site information.
 $conf['site_name'] = 'BADCamp 2016';
