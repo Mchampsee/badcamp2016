@@ -27,14 +27,9 @@ projects:
   admin_views:
     version: "1.5"
   adminimal_admin_menu:
-    version: "1.6"
+    version: "1.7"
   ckeditor:
-    version: "1.16"
-    patch:
-      # Fixed in 1.17 - https://www.drupal.org/node/1154730
-      - "https://www.drupal.org/files/issues/ckeditor-area-height-1154730-29.patch"
-      # Fixed in 1.17 - https://www.drupal.org/node/2323149
-      - "https://www.drupal.org/files/issues/ckeditor-admin-css-images-2323149-1.patch"
+    version: "1.17"
   ctools:
     version: "1.9"
   date:
