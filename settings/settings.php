@@ -50,6 +50,7 @@ $conf['master_modules']['base'] = array(
   'views_bulk_operations',
 
   // BADCamp features.
+  'feature_badcamp_users',
   // BADCamp custom modules.
 );
 $conf['master_modules']['local'] = array(

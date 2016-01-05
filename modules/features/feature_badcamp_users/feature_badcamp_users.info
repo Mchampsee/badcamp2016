@@ -1,0 +1,13 @@
+name = BADCamp Users
+description = User configuration
+core = 7.x
+package = BADCamp
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_name_first
+features[field_base][] = field_name_last
+features[field_instance][] = user-user-field_name_first
+features[field_instance][] = user-user-field_name_last
+project path = sites/all/modules/features
