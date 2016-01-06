@@ -16,7 +16,8 @@ gulp.task('phplint', function (cb) {
   var sourcePatterns = [
     'modules/**/*.' + extensions,
     'themes/**/*.' + extensions,
-    'settings/**/*.' + extensions
+    'settings/**/*.' + extensions,
+    'tests/**/*.' + extensions
   ];
   var phpLintOptions = {
     limit: 50

@@ -33,4 +33,10 @@ Feature: Users can create an account.
 
     When I run drush "cron"
     Then the email to "username@example.com" should contain "Thank you for registering"
-    And I run drush "ucan" "test -y"
+
+    When I follow the email URL matching regex "/http:\/\/.*\/user\/reset\/.*/"
+    And I press "Log in"
+    Then I should see the success message "You have just used your one-time login link"
+
+    # Cleanup.
+    When I run drush "ucan" "test -y"
