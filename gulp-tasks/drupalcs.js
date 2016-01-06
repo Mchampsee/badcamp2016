@@ -24,6 +24,7 @@ gulp.task('drupalcs', function () {
     '!modules/**/*.features.*',
     '!modules/**/*.strongarm.*',
     '!modules/**/*.field_group.inc',
+    '!modules/**/*.pages_default.inc',
     '!modules/**/*.views_default.inc'
   ];
 
