@@ -43,6 +43,8 @@ $conf['master_modules']['base'] = array(
   'master',
   'metatag',
   'module_filter',
+  'panels',
+  'panels_node',
   'pathauto',
   'strongarm',
   'token',
@@ -50,6 +52,7 @@ $conf['master_modules']['base'] = array(
   'views_bulk_operations',
 
   // BADCamp features.
+  'feature_badcamp_homepage',
   'feature_badcamp_users',
   // BADCamp custom modules.
 );
@@ -57,6 +60,7 @@ $conf['master_modules']['local'] = array(
   'dblog',
   'diff',
   'field_ui',
+  'page_manager',
   'views_ui',
 );
 
@@ -105,6 +109,7 @@ $conf['user_register'] = 1;
 $conf['site_name'] = 'BADCamp 2016';
 $conf['site_slogan'] = 'Bay Area Drupal Camp';
 $conf['site_mail'] = 'info@badcamp.net';
+$conf['site_frontpage'] = 'homepage';
 
 // Local configuration; should remain at the bottom of this file.
 if (file_exists(DRUPAL_ROOT . '/sites/default/settings.local.php')) {

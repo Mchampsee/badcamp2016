@@ -8,10 +8,12 @@ Feature: Users can create an account.
     Given I am an anonymous user
     And the test email system is enabled
 
-    When I am at "user/login"
-    Then I should see "Create new account"
+    When I visit "/user"
+    And I click "Log in"
+    Then I should see "Registration is not saved"
+    And I should see "I forgot my password"
 
-    When I am at "user/register"
+    When I click "Register for BADCamp"
     And I press the "Create new account" button
     Then I should see "Username field is required."
 
@@ -37,6 +39,18 @@ Feature: Users can create an account.
     When I follow the email URL matching regex "/http:\/\/.*\/user\/reset\/.*/"
     And I press "Log in"
     Then I should see the success message "You have just used your one-time login link"
+
+    When I enter "test" for "Password"
+    And I enter "test" for "Confirm password"
+    And I press "Save"
+    Then I should see the success message "The changes have been saved."
+
+    When I am at "user/logout"
+    And I am at "user/login"
+    And I enter "test" for "Username"
+    And I enter "test" for "Password"
+    And I press "Log in"
+    Then I should see "Member for"
 
     # Cleanup.
     When I run drush "ucan" "test -y"

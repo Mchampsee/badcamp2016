@@ -82,6 +82,8 @@ projects:
     patch:
       # https://www.drupal.org/node/2609618
       - "https://www.drupal.org/files/issues/pathauto-migrate-fatal-2609618-2.patch"
+  panels:
+    version: "3.5"
   rabbit_hole:
     version: "2.23"
   strongarm:
