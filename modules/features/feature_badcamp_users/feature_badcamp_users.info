@@ -1,4 +1,4 @@
-name = BADCamp Users
+name = BADCamp Users Feature
 description = User configuration
 core = 7.x
 package = BADCamp
