@@ -7,4 +7,4 @@ Feature: Reports of activities.
   Scenario: Organizers can see attendee lists and count.
     Given I am logged in as an "Organizer"
     When I visit "/admin/reports/attendees"
-    I should see "Displaying"
+    Then I should see "Displaying"

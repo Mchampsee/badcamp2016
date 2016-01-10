@@ -89,4 +89,4 @@ Feature: Users can create an account.
 
   Scenario: Users can find other users
     When I visit "/attendees"
-    I should see "Displaying"
+    Then I should see "Displaying"
