@@ -40,7 +40,7 @@ function feature_badcamp_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 41,
+      'weight' => 1,
     ),
   );
 
@@ -74,7 +74,7 @@ function feature_badcamp_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 42,
+      'weight' => 2,
     ),
   );
 

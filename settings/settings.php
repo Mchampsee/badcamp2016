@@ -37,6 +37,7 @@ $conf['master_modules']['base'] = array(
   'ctools',
   'entity',
   'features',
+  'field_group',
   'globalredirect',
   'inline_entity_form',
   'link',

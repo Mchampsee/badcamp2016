@@ -4,6 +4,7 @@ Feature: Users can create an account.
   As an user
   I need to be able to register for the conference.
 
+  @registration
   Scenario: Create an account
     Given I am an anonymous user
     And the test email system is enabled
@@ -54,3 +55,15 @@ Feature: Users can create an account.
 
     # Cleanup.
     When I run drush "ucan" "test -y"
+
+  @profile
+  Scenario: Users can add an image
+    Given users:
+     | name | mail | field_name_first | field_name_last |
+     | genevieve | marie@peck.com | Genevieve | Peck |
+    And I am logged in as "genevieve"
+    When I visit "/user/"
+    And I click "Edit"
+    And I attach the file "GenevieveCat-2677x1870.jpg" to "edit-field-image-und-0-upload"
+    And I press "Save"
+    Then I should see "The changes have been saved."
