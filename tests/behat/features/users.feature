@@ -54,3 +54,22 @@ Feature: Users can create an account.
 
     # Cleanup.
     When I run drush "ucan" "test -y"
+
+  @registration
+  Scenario: User forgets password
+    Given I am an anonymous user
+    And the test email system is enabled
+    And users:
+      | name | mail |
+      | test | username@example.com |
+
+    When I visit "/user"
+    And I click "I forgot my password"
+    Then I should see "Registration is not saved"
+
+    When I enter "test" for "edit-name"
+    And I press "E-mail new password"
+    Then I should see the success message "Further instructions have been sent to your e-mail address."
+
+    When I run drush "cron"
+    Then the email to "username@example.com" should contain "A request to reset the password for your account has been made"
