@@ -86,3 +86,7 @@ Feature: Users can create an account.
     And I attach the file "GenevieveCat-2677x1870.jpg" to "edit-picture-upload"
     And I press "Save"
     Then I should see "The changes have been saved."
+
+  Scenario: Users can find other users
+    When I visit "/attendees"
+    I should see "Displaying"

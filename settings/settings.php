@@ -52,9 +52,11 @@ $conf['master_modules']['base'] = array(
   'token',
   'views',
   'views_bulk_operations',
+  'views_content',
 
   // BADCamp features.
   'feature_badcamp_homepage',
+  'feature_badcamp_reports',
   'feature_badcamp_users',
   // BADCamp custom modules.
 );
