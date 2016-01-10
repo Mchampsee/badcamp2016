@@ -47,6 +47,7 @@ $conf['master_modules']['base'] = array(
   'panels',
   'panels_node',
   'pathauto',
+  'realname',
   'strongarm',
   'token',
   'views',
