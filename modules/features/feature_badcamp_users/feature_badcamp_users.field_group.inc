@@ -25,17 +25,17 @@ function feature_badcamp_users_field_group_info() {
     'children' => array(
       0 => 'field_name_first',
       1 => 'field_name_last',
-      2 => 'field_image',
-      3 => 'account',
+      2 => 'account',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Identity',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-identity field-group-fieldset',
         'required_fields' => 1,
+        'classes' => 'group-identity field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_identity|user|user|form'] = $field_group;

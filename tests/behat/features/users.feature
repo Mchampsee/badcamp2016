@@ -83,6 +83,10 @@ Feature: Users can create an account.
     And I am logged in as "genevieve"
     When I visit "/user/"
     And I click "Edit"
-    And I attach the file "GenevieveCat-2677x1870.jpg" to "edit-field-image-und-0-upload"
+    And I attach the file "GenevieveCat-2677x1870.jpg" to "edit-picture-upload"
     And I press "Save"
     Then I should see "The changes have been saved."
+
+  Scenario: Users can find other users
+    When I visit "/attendees"
+    Then I should see "Displaying"
