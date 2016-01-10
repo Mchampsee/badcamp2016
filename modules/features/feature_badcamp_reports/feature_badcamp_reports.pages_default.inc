@@ -13,9 +13,9 @@ function feature_badcamp_reports_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'attendees_report';
   $page->task = 'page';
-  $page->admin_title = 'Attendees Report';
+  $page->admin_title = 'Organizer';
   $page->admin_description = '';
-  $page->path = 'admin/reports/attendees';
+  $page->path = 'organizer';
   $page->access = array(
     'plugins' => array(
       0 => array(
@@ -34,7 +34,7 @@ function feature_badcamp_reports_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Attendees Report',
+    'title' => 'Organizer',
     'name' => 'management',
     'weight' => '0',
     'parent' => array(
