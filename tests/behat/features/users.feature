@@ -55,6 +55,7 @@ Feature: Users can create an account.
     # Cleanup.
     When I run drush "ucan" "test -y"
 
+  @registration
   Scenario: User forgets password
     Given I am an anonymous user
     And the test email system is enabled
@@ -68,8 +69,6 @@ Feature: Users can create an account.
 
     When I enter "test" for "edit-name"
     And I press "E-mail new password"
-    And print last response
-    And I break
     Then I should see the success message "Further instructions have been sent to your e-mail address."
 
     When I run drush "cron"
