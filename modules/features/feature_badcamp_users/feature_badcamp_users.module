@@ -4,6 +4,8 @@
  * BADCamp Users custom functionality.
  */
 
+include_once 'feature_badcamp_users.features.inc';
+
 /**
  * Implements hook_form_ID_alter().
  */
@@ -23,6 +25,7 @@ function feature_badcamp_users_form_user_pass_alter(&$form, &$form_state) {
   $form['notice']['#markup'] = t("Registration is not saved from year-to-year; if you haven't registered this year, you will need to register again.");
   $form['notice']['#weight'] = -1;
 }
+
 /**
  * Implements hook_menu_alter().
  */
