@@ -26,9 +26,9 @@
     }
   },
   "extensions": {
-  },
-  "aquifer-git": {
-    "source": "aquifer-git",
-    "remote": "ssh://codeserver.dev.d684e18f-0ff6-4ec1-a2b4-280dc4e98bc5@codeserver.dev.d684e18f-0ff6-4ec1-a2b4-280dc4e98bc5.drush.in:2222/~/repository.git"
+    "aquifer-git": {
+      "source": "aquifer-git",
+      "remote": "ssh://codeserver.dev.d684e18f-0ff6-4ec1-a2b4-280dc4e98bc5@codeserver.dev.d684e18f-0ff6-4ec1-a2b4-280dc4e98bc5.drush.in:2222/~/repository.git"
+    }
   }
 }
