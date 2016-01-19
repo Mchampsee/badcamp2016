@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-DRUSH="./vendor/bin/drush"
-SITE_ALIAS="@badcamp2016.badcamp2016.dev"
+source ./scripts/load_config.sh
+
 $DRUSH $SITE_ALIAS cc drush
 echo "Installing..."
 $DRUSH $SITE_ALIAS si --account-pass=admin -y

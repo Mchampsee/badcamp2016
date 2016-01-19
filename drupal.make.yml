@@ -10,8 +10,11 @@ projects:
   # Core.
   pressflow:
     type: "core"
-    download: "https://github.com/pressflow/7.git"
-    tag: "pressflow-7.41"
+    download:
+      type: "git"
+      url: "git@github.com:pantheon-systems/drops-7.git"
+      branch: "master"
+      revision: "89c51bb3b84ef4fc6160282a2863e379aa345d9f"
     patch:
       # https://www.drupal.org/node/1443308#comment-10329229
       - "https://www.drupal.org/files/issues/drupal-1443308-49-module_load_include-static-cache.patch"
@@ -82,8 +85,12 @@ projects:
     patch:
       # https://www.drupal.org/node/2609618
       - "https://www.drupal.org/files/issues/pathauto-migrate-fatal-2609618-2.patch"
+  panels:
+    version: "3.5"
   rabbit_hole:
     version: "2.23"
+  realname:
+    version: "1.2"
   strongarm:
     version: "2.0"
   token:
@@ -97,11 +104,6 @@ projects:
     version: "1.23"
 
 libraries:
-  registry_rebuild:
-    destination: "drush"
-    download:
-      type: "file"
-      url: "http://ftp.drupal.org/files/projects/registry_rebuild-7.x-2.2.tar.gz"
   ckeditor:
     download:
       type: "file"

@@ -42,6 +42,7 @@ Prepare for local development:
 * Edit config.yml and update the following:
     * Find and replace `drupalvm.dev` with `badcamp2016.dev`
     * vagrant_machine_name: `badcamp2016`
+    * destination: `/var/www`
     * vagrant_ip: `0.0.0.0`
     * vagrant_synced_folders - local_path: `~/projects/badcamp2016` (modify as necessary)
     * vagrant_memory: `2048`
@@ -56,15 +57,25 @@ Prepare for local development:
       * `# - memcached`
       * `# - nodejs`
       * `# - pimpmylog`
+      * `- redis`
       * `# - ruby`
       * `# - selenium`
       * `# - solr`
       * `- varnish`
       * `# - xdebug`
       * `# - xhprof`
+    * apache_vhosts: comment out all except the primary
 * Install Ansible Galaxy roles required for this VM: `sudo ansible-galaxy install -r provisioning/requirements.yml --force`
 
 * `vagrant up`
+
+Edit the aliases to be more sane:
+
+* `nano ~/.drush/badcamp.aliases.drushrc.php` - change `$aliases['badcamp.local']` to `$aliases['local']`
+
+Clear Drush cache:
+
+* `drush cc drush`
 
 Create local settings files:
 
@@ -72,17 +83,17 @@ Create local settings files:
 
 Prepare the site:
 
-* `./scripts/local_install.sh`
+* `./scripts/install.sh`
 
 Set Drush alias:
 
-* `drush site-set @badcamp2016.badcamp2016.dev`
+* `drush site-set @badcamp.local`
 
 Check status:
 
 * `drush status`
 
-Visit the result: http://badcamp2016.dev
+Visit the result: http://badcamp.local
 
 ## Structure
 

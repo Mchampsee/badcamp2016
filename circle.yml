@@ -25,7 +25,7 @@ dependencies:
     # Drupal settings.
     - cp ./circle/settings.secret.php ./settings
     # Set alias.
-    - drush site-set @badcamp2016.badcamp2016.dev
+    - drush site-set @badcamp2016.circle
     # Install and start Selenium.
     - wget http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.2.jar
     - java -jar selenium-server-standalone-2.48.2.jar:
@@ -58,11 +58,15 @@ test:
     - ./node_modules/.bin/gulp drupalcs --report=junit --reportfile=$CIRCLE_TEST_REPORTS/junit/
     # ESLint.
     - ./node_modules/.bin/gulp eslint --outputfile=$CIRCLE_TEST_REPORTS/junit/
-    # Use the arguments '-f pretty -o /dev/stdout -f junit -o /home/ubuntu/reports' when Behat releases the JUnit formatter.
     - sudo BUILD="$HOME/build" su -c "PATH=$PATH:/home/ubuntu/.composer/vendor/bin/ && drush site-set www-data@localhost$BUILD#badcamp2016.dev && /home/ubuntu/.phpenv/shims/php ./vendor/bin/behat -p circle" www-data
-    # - sudo ls -la $HOME/reports
-    # - sudo mv $HOME/reports/*.xml $CIRCLE_TEST_REPORTS/junit/
     # Overridden features.
-    - drush @badcamp2016.badcamp2016.dev fl | grep -qi 'overridden' && (echo 'Overridden Features - FAIL' && exit 1) || (echo 'Overridden Features - PASS' && exit 0)
+    - drush @badcamp2016.circle fl | grep -qi 'overridden' && (echo 'Overridden Features - FAIL' && exit 1) || (echo 'Overridden Features - PASS' && exit 0)
     # Available updates.
-    - drush @badcamp2016.badcamp2016.dev ups | grep -qi "update available" && (echo 'Updates available - FAIL' && exit 1) || (echo 'No updates available - PASS' && exit 0)
+    - drush @badcamp2016.circle ups | grep -qi "update available" && (echo 'Updates available - FAIL' && exit 1) || (echo 'No updates available - PASS' && exit 0)
+
+deployment:
+  master:
+    branch: master
+    commands:
+      # Deploy to the master branch on Pantheon.
+      - ./node_modules/aquifer/bin/aquifer.js deploy-git -m "Automated deployment at $CIRCLE_SHA1" -b "master" -n "BADCamp Deploy" -e "info@badcamp.net"
