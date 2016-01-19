@@ -35,6 +35,8 @@ dependencies:
     - sudo a2ensite badcamp2016
     - sudo a2enmod rewrite
     - sudo service apache2 restart
+    # Aquifer.
+    - ./node_modules/aquifer/bin/aquifer.js extensions-load
   post:
     # Build the Drupal site and set files permissions.
     - sudo chown -R ubuntu:www-data ./files
