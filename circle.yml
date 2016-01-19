@@ -65,7 +65,8 @@ test:
     - drush @badcamp2016.circle ups | grep -qi "update available" && (echo 'Updates available - FAIL' && exit 1) || (echo 'No updates available - PASS' && exit 0)
 
 deployment:
-  branch: master
-  commands:
-    # Deploy to the master branch on Pantheon.
-    - ./node_modules/aquifer/bin/aquifer.js deploy-git -m "Automated deployment at $CIRCLE_SHA1" -b "master" -n "BADCamp Deploy" -e "info@badcamp.net"
+  master:
+    branch: master
+    commands:
+      # Deploy to the master branch on Pantheon.
+      - ./node_modules/aquifer/bin/aquifer.js deploy-git -m "Automated deployment at $CIRCLE_SHA1" -b "master" -n "BADCamp Deploy" -e "info@badcamp.net"
