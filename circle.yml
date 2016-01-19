@@ -7,6 +7,8 @@ machine:
 dependencies:
   cache_directories:
     - vendor
+    - node_modules
+    - .aquifer
     - ~/.drush
     - ~/.composer
   override:
