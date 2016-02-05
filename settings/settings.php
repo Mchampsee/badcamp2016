@@ -102,6 +102,7 @@ $conf['views_ui_show_master_display'] = 1;
 
 // Regional settings.
 $conf['date_default_timezone'] = 'America/Los_Angeles';
+$conf['configurable_timezones'] = 0;
 
 // Disable Drupal's "poor man's cron".
 $conf['cron_safe_threshold'] = 0;
