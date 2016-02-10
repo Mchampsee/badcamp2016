@@ -87,6 +87,15 @@ Feature: Users can create an account.
     And I press "Save"
     Then I should see "The changes have been saved."
 
+  Scenario: Users should not be able to set timezone
+    Given users:
+      | name | mail | field_name_first | field_name_last |
+      | genevieve | marie@peck.com | Genevieve | Peck |
+    And I am logged in as "genevieve"
+    When I visit "/user/"
+    And I click "Edit"
+    Then I should not see "Registration is not saved"
+
   Scenario: Users can find other users
     When I visit "/attendees"
     Then I should see "Displaying"
