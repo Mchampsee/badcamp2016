@@ -94,7 +94,7 @@ Feature: Users can create an account.
     And I am logged in as "genevieve"
     When I visit "/user/"
     And I click "Edit"
-    Then I should not see "Registration is not saved"
+    Then I should not see "Time zone"
 
   Scenario: Users can find other users
     When I visit "/attendees"
