@@ -1,0 +1,10 @@
+name = Stripe Donation
+description = Provides a way to collect donations using Stripe. Somewhat domain specific to BADCamp at this time.
+package = BADCamp
+core = 7.x
+version = 7.x-1.x
+
+dependencies[] = stripe
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels

@@ -1,48 +1,29 @@
 <?php
 /**
- * The Training Registration Pages
+ * @file
+ * Training registration forms.
  */
 
 /**
- * Returns the training registration form with Stripe fields
- * @return string
+ * Training registration form.
  */
 function training_reg_registration_form($form, &$form_state, $node) {
   global $user;
-  // Validate the node type and status
-  if ($node->type != 'training') {
-    drupal_set_message(t("Incorrect content type"), 'error');
-    drupal_goto('<front>');
-    return;
-  }
-  if ($node->status == NODE_NOT_PUBLISHED) {
-    drupal_set_message(t("Node is unpublished"), 'error');
-    drupal_goto('<front>');
-    return;
-  }
+
   if (training_reg_registration_remaining($node) == 0) {
-    drupal_set_message(t("Training is full"), 'error');
+    drupal_set_message(t('Sorry, the training is full.'), 'error');
     drupal_goto('node/' . $node->nid);
     return;
   }
+
   if (training_reg_user_registered($user, $node)) {
-    drupal_set_message(t("You are already registered"), 'error');
+    drupal_set_message(t('Congratulations, you are already registered!'));
     drupal_goto('node/' . $node->nid);
     return;
   }
 
   $form_state['training'] = $node;
-  $greeting = variable_get('training_payment_message', '');
-  $vars = array(
-    '@user' => check_plain($user->name),
-    '@training' => check_plain($node->title),
-  );
-  $form['greeting'] = array(
-    '#type' => 'markup',
-    '#markup' => t($greeting, $vars),
-    '#prefix' => '<div id="greeting">',
-    '#suffix' => '</div>',
-  );
+
   $form['stripe'] = array(
     '#type' => 'stripe_payment',
     '#prefix' => '<div id="stripe-wrapper">',
@@ -60,7 +41,7 @@ function training_reg_registration_form($form, &$form_state, $node) {
 }
 
 /**
- * Submit for the training registration form
+ * Training registration form submission.
  */
 function training_reg_registration_form_submit($form, &$form_state) {
   global $user;
@@ -69,12 +50,10 @@ function training_reg_registration_form_submit($form, &$form_state) {
   if (($library = libraries_load('stripe')) && !empty($library['installed'])) {
     try {
       $charge = \Stripe\Charge::create(array(
-        "amount" => variable_get('training_reg_price', '2000'),
-        "currency" => "usd",
-        "card" => $form_state['values']['stripe']['stripe_token'],
-        "description" => variable_get('site_name', '') .
-                         ' - Training Registration for ' .
-                         check_plain($node->title),
+        'amount' => variable_get('training_reg_price', '2000'),
+        'currency' => 'usd',
+        'card' => $form_state['values']['stripe']['stripe_token'],
+        'description' => variable_get('site_name', '') . ' - Training Registration for ' . check_plain($node->title),
       ));
       $stripe_transaction_id = $charge->__get('id');
       $stripe_transaction_status = $charge->__get('status');
@@ -94,10 +73,10 @@ function training_reg_registration_form_submit($form, &$form_state) {
     return;
   }
 
-  // Create a Training Registration entity for this training and user
-  // if the transaction status is successful
-  if ($stripe_transaction_status == "succeeded") {
-    drupal_set_message(t("Success! You are now registered for: @name",
+  // Create a Training Registration entity for this training and user.
+  // if the transaction status is successful.
+  if ($stripe_transaction_status == 'succeeded') {
+    drupal_set_message(t('Success! You are now registered for: @name',
       array('@name' => $node->title)));
 
     $entity_type = 'training_reg';

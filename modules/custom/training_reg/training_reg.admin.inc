@@ -1,11 +1,13 @@
 <?php
 /**
- * The Training Registration Admin
+ * @file
+ * Training registration administrative form.
  */
 
+/**
+ * Simple training registration administration form.
+ */
 function training_reg_admin_form($form, &$form_state) {
-  // @todo: Add vars to module uninstall.
-
   $form['training_reg_price'] = array(
     '#type' => 'textfield',
     '#title' => t('Training price'),
@@ -34,5 +36,3 @@ function training_reg_admin_form($form, &$form_state) {
 
   return system_settings_form($form);
 }
-
-

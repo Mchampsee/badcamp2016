@@ -1,13 +1,13 @@
 <?php
 /**
- * Functionality for training registration using Stripe
- * 
- * @author Brad Erickson (eosrei) 2015
+ * @file
+ * Stripe training registration.
+ *
+ * @author Initial version by Brad Erickson (eosrei) in 2015.
  */
 
-
 /**
- * Implements hook_permission()
+ * Implements hook_permission().
  */
 function training_reg_permission() {
   return array(
@@ -23,9 +23,7 @@ function training_reg_permission() {
 }
 
 /**
- * Implements hook_menu()
- * 
- * Makes admin config and training registration pages.
+ * Implements hook_menu().
  */
 function training_reg_menu() {
   $items['admin/config/training_reg'] = array(
@@ -37,7 +35,7 @@ function training_reg_menu() {
     'access arguments' => array('administer training registration'),
     'file' => 'training_reg.admin.inc',
   );
-  //@todo: Make page title callback
+  // @todo: Make page title callback.
   $items['training/%node/register'] = array(
     'title' => 'Register for Training',
     'type' => MENU_CALLBACK,
@@ -50,8 +48,8 @@ function training_reg_menu() {
 }
 
 /**
- * Implements hook_field_extra_fields()
- * 
+ * Implements hook_field_extra_fields().
+ *
  * Shows the training_register field in content type display settings.
  */
 function training_reg_field_extra_fields() {
@@ -67,44 +65,46 @@ function training_reg_field_extra_fields() {
         'description' => t('Count of training registration attendees remaining'),
         'weight' => 5,
       ),
-    )
+    ),
   );
 
   return $extra;
 }
 
 /**
-* Implements hook_node_view()
-* 
-* Outputs the training_register field content.
-*/
+ * Implements hook_node_view().
+ *
+ * Outputs the training_register field content.
+ */
 function training_reg_node_view($node, $view_mode, $langcode) {
   $extrafields = field_extra_fields_get_display('node', $node->type, $view_mode);
 
   $extrafield_name = 'register_link';
   if (isset($extrafields[$extrafield_name])
-      && isset($extrafields[$extrafield_name]['visible'])
-      && $extrafields[$extrafield_name]['visible']) {
-        $node->content[$extrafield_name] = training_reg_link_field($node);
-      }
+    && isset($extrafields[$extrafield_name]['visible'])
+    && $extrafields[$extrafield_name]['visible']
+  ) {
+    $node->content[$extrafield_name] = training_reg_link_field($node);
+  }
   $extrafield_name = 'register_remaining';
   if (isset($extrafields[$extrafield_name])
-      && isset($extrafields[$extrafield_name]['visible'])
-      && $extrafields[$extrafield_name]['visible']) {
-        $node->content[$extrafield_name] = training_reg_remaining_field($node);
-      }
+    && isset($extrafields[$extrafield_name]['visible'])
+    && $extrafields[$extrafield_name]['visible']
+  ) {
+    $node->content[$extrafield_name] = training_reg_remaining_field($node);
+  }
 }
 
 /**
- * Outputs the training_register field
- * 
+ * Outputs the training_register field.
+ *
  * Available states:
- * 1. Registration Open - Anonymous User
- * 2. Registration Closed - Anonymous User
- * 3. Registration Open - Unregistered User
- * 4. Registration Closed - Unregistered User
- * 5. Registration Open - Registered User
- * 6. Registration Closed - Registered User
+ * 1. Registration Open - Anonymous User.
+ * 2. Registration Closed - Anonymous User.
+ * 3. Registration Open - Unregistered User.
+ * 4. Registration Closed - Unregistered User.
+ * 5. Registration Open - Registered User.
+ * 6. Registration Closed - Registered User.
  */
 function training_reg_link_field($training) {
   global $user;
@@ -118,15 +118,15 @@ function training_reg_link_field($training) {
     $form['training_reg_status']['#markup'] = t('You are registered for this training. Contact the admins to cancel.');
   }
   else {
-    $form['training_reg_status']['#markup'] = t('You are NOT registered for this training.<p>@message</p>', array('@message' => variable_get('training_reg_message','')));
+    $form['training_reg_status']['#markup'] = t('You are NOT registered for this training.<p>@message</p>', array('@message' => variable_get('training_reg_message', '')));
   }
-  
+
   if (training_reg_registration_remaining($training) > 0) {
     if (training_reg_user_registered($user, $training)) {
-      //@todo: Automate Unregister; MUST have deadline.
+      // @todo: Automate Unregister; MUST have deadline.
     }
     else {
-      $options = array();  
+      $options = array();
       $attr = array(
         'class' => array('training-register button buttercup'),
         'title' => t('Register for @name.', array('@name' => $training->title)),
@@ -143,7 +143,7 @@ function training_reg_link_field($training) {
       else {
         // @todo: Make the URL destination work for new users and users who need to login.
         $options['query'] = array('destination' => 'training/' . $training->nid . '/register');
-        $form['training_reg_link']['#href'] =  'user/register';
+        $form['training_reg_link']['#href'] = 'user/register';
         $form['training_reg_link']['#options'] = $options;
       }
     }
@@ -152,16 +152,19 @@ function training_reg_link_field($training) {
 }
 
 /**
- * Outputs the count of remaining registrations.
- * 
- * @param $training
- * @return Field form
+ * Render the remaining registration count.
+ *
+ * @param object $training
+ *   The training node in question.
+ *
+ * @return array
+ *   Form element.
  */
 function training_reg_remaining_field($training) {
   $remaining = training_reg_registration_remaining($training);
-  $msg = ($remaining == 0) ? t('None. Training is full.') : $remaining;
+  $msg = ($remaining == 0) ? t('None; the training is full.') : $remaining;
 
-  return $form['training_reg_remaining'] = array(
+  return array(
     '#type' => 'item',
     '#title' => t('Registrations Remaining:'),
     '#markup' => $msg,
@@ -172,10 +175,14 @@ function training_reg_remaining_field($training) {
 
 /**
  * Check if user is registered for the training.
- * 
- * @param $user
- * @param $training
- * @return boolean
+ *
+ * @param object $user
+ *   The Drupal user in question.
+ * @param object $training
+ *   The training node in question.
+ *
+ * @return bool
+ *   TRUE if they're registered.
  */
 function training_reg_user_registered($user, $training) {
   $status = &drupal_static(__FUNCTION__, array());
@@ -184,28 +191,33 @@ function training_reg_user_registered($user, $training) {
   if (!isset($status[$training->nid][$user->uid])) {
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'training_reg')
-    ->entityCondition('bundle', 'training_reg')
-    ->fieldCondition('field_training_reg_training', 'target_id', $training->nid, '=')
-    ->fieldCondition('field_training_reg_attendee', 'target_id', $user->uid, '=');
+      ->entityCondition('bundle', 'training_reg')
+      ->fieldCondition('field_training_reg_training', 'target_id', $training->nid, '=')
+      ->fieldCondition('field_training_reg_attendee', 'target_id', $user->uid, '=');
 
     $count = $query->count()->execute();
-    // Any results mean the user is registered
+    // Any results mean the user is registered.
     $status[$training->nid][$user->uid] = ($count > 0);
   }
   return $status[$training->nid][$user->uid];
 }
 
 /**
- * Count of users registered for the training
- * @param $training
+ * Count of users registered for the training.
+ *
+ * @param object $training
+ *   The training node in question.
+ *
+ * @return int
+ *   The count of registered users.
  */
 function training_reg_registration_count($training) {
   $count = &drupal_static(__FUNCTION__, array());
   if (!isset($count[$training->nid])) {
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'training_reg')
-    ->entityCondition('bundle', 'training_reg')
-    ->fieldCondition('field_training_reg_training', 'target_id', $training->nid, '=');
+      ->entityCondition('bundle', 'training_reg')
+      ->fieldCondition('field_training_reg_training', 'target_id', $training->nid, '=');
 
     $count[$training->nid] = $query->count()->execute();
   }
@@ -213,8 +225,13 @@ function training_reg_registration_count($training) {
 }
 
 /**
- * Count of users registrations available for the training
- * @param $training
+ * Count of users registrations available for the training.
+ *
+ * @param object $training
+ *   The training node in question.
+ *
+ * @return int
+ *   The count of remaining registrations.
  */
 function training_reg_registration_remaining($training) {
   $remaining = &drupal_static(__FUNCTION__, array());
@@ -224,4 +241,3 @@ function training_reg_registration_remaining($training) {
   }
   return $remaining[$training->nid];
 }
-
