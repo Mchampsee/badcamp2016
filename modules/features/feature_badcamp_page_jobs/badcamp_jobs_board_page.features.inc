@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * feature_badcamp_homepage.features.inc
+ * badcamp_jobs_board_page.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function feature_badcamp_homepage_ctools_plugin_api($module = NULL, $api = NULL) {
+function badcamp_jobs_board_page_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }

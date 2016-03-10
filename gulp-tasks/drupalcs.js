@@ -21,6 +21,7 @@ gulp.task('drupalcs', function () {
     'themes/**/*.' + extensions,
     'settings/**/*.' + extensions,
     'tests/**/*.' + extensions,
+    '!modules/**/*.ctools_content.inc',
     '!modules/**/*.features.*',
     '!modules/**/*.strongarm.*',
     '!modules/**/*.field_group.inc',
