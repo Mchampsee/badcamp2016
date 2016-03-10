@@ -91,6 +91,9 @@ projects:
     version: "2.23"
   realname:
     version: "1.2"
+  stripe:
+    # TODO: pin to a specific revision.
+    version: "1.x-dev"
   strongarm:
     version: "2.0"
   token:
