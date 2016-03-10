@@ -2,7 +2,7 @@ name = Training Registration Feature
 description = Training Registration content type and entity
 core = 7.x
 package = BADCamp
-version = 7.x-1.2
+version = 7.x-10.0
 project = feature_badcamp_training_reg
 dependencies[] = badcamp_events
 dependencies[] = badcamp_sessions
@@ -60,3 +60,4 @@ features[views_view][] = training_registration_admin
 features[views_view][] = user_trainings
 features_exclude[dependencies][options] = options
 project path = sites/all/modules/features
+
