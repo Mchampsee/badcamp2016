@@ -3,7 +3,6 @@ description = Main settings and config for the "Summit Contact Form" entityform 
 core = 7.x
 package = BADCamp Forms
 version = 7.x-1.1
-project = badcamp_summit_contact_form
 dependencies[] = entity
 dependencies[] = entityform
 dependencies[] = entityreference

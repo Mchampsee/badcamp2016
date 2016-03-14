@@ -3,7 +3,6 @@ description = Main settings and config for the "Events" and "Social Events" cont
 core = 7.x
 package = BADCamp Content types
 version = 7.x-2.0-beta11
-project = badcamp_events
 dependencies[] = addressfield
 dependencies[] = badcamp_site_config
 dependencies[] = badcamp_user_profile

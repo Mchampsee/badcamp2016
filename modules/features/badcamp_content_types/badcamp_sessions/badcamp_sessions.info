@@ -3,7 +3,6 @@ description = Main settings and config for the "Sessions" content type and relat
 core = 7.x
 package = BADCamp Content types
 version = 7.x-1.3-beta6
-project = badcamp_sessions
 dependencies[] = badcamp_events
 dependencies[] = badcamp_site_config
 dependencies[] = ctools

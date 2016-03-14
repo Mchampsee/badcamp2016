@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Access for schedules.
+ */
 
 /**
  * Implements hook_views_api().
@@ -15,8 +19,8 @@ function badcamp_views_user_and_role_perm_views_plugins() {
     'access' => array(
       'user_and_role' => array(
         'title' => t('User and Role'),
-        'help' => t('Access will be granted to the contextualy filter matching current user, specific user id\'s and users with any of the specified roles.'),
-        'handler' => 'badcamp_views_user_and_role_perm_plugin_access_user_and_role',
+        'help' => t('Access will be granted to the contextualy filter matching current user, specific user ids and users with any of the specified roles.'),
+        'handler' => 'BadcampViewsUserAndRolePermPluginAccessUserAndRole',
         'uses options' => TRUE,
         'help topic' => 'access-user-role',
       ),
@@ -27,8 +31,8 @@ function badcamp_views_user_and_role_perm_views_plugins() {
 }
 
 /**
- * Access callback for the badcamp_my_schedule_plugin_access_my_schedule access plugin.
-
+ * Access callback for the my schedule access plugin.
+ *
  * Determine if the specified user has access to a view on the basis of any of
  * the requested roles. If the $account argument is omitted, the current user
  * is used.
@@ -41,14 +45,14 @@ function badcamp_views_user_and_role_perm_check_roles($options, $account = NULL)
   $arg0 = arg(0);
   $arg1 = arg(1);
 
-  // If matching contextual user is allowed, check if user id is set and that it is the user page
+  // If matching contextual user is allowed, check if user id is set and that
+  // it is the user page.
   if (($contextual_match == TRUE) && isset($arg1) && is_numeric($arg1) && ($arg1 == $uid) && ($arg0 == 'user')) {
     return TRUE;
   }
 
   // If current user has permission to access all views, allow access.
   // If current user has a role that matches allowed roles, allow access.
-  $roles = array();
   $account = isset($account) ? $account : $user;
   $roles = isset($account->roles) ? array_keys($account->roles) : array_keys($account);
   $roles[] = $account->uid ? DRUPAL_AUTHENTICATED_RID : DRUPAL_ANONYMOUS_RID;

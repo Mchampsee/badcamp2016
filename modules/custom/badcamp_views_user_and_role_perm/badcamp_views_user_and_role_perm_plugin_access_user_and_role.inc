@@ -4,6 +4,9 @@
  * Definition of badcamp_my_schedule_plugin_access_my_schedule.
  */
 
+// Temporary.
+// @codingStandardsIgnoreFile
+
 /**
  * Access plugin that provides role-based access control.
  *
@@ -11,7 +14,10 @@
  */
 class badcamp_views_user_and_role_perm_plugin_access_user_and_role extends views_plugin_access {
 
-  function access($account) {
+  /**
+   * {@inheritdoc}
+   */
+  public function access($account) {
     $options = array();
     $options['rids'] = array_filter($this->options['role']);
     $options['contextual_match'] = $this->options['contextual_match'];
@@ -19,7 +25,10 @@ class badcamp_views_user_and_role_perm_plugin_access_user_and_role extends views
     return badcamp_views_user_and_role_perm_check_roles($options, $account);
   }
 
-  function get_access_callback() {
+  /**
+   * {@inheritdoc}
+   */
+  public function get_access_callback() {
     $options = array();
     $options['rids'] = array_filter($this->options['role']);
     $options['contextual_match'] = $this->options['contextual_match'];
@@ -27,29 +36,36 @@ class badcamp_views_user_and_role_perm_plugin_access_user_and_role extends views
     return array('badcamp_views_user_and_role_perm_check_roles', array($options));
   }
 
-  function summary_title() {
+  /**
+   * {@inheritdoc}
+   */
+  public function summary_title() {
     $current_user = $this->options['contextual_match'];
     $current_user_only_allowed = 'No restrictions';
-    $current_user_allowed = '';
     if ($current_user == TRUE) {
       $current_user_only_allowed = t('Only matching logged in user');
-      $current_user_allowed = t(' and matching logged in user');
+      $current_user_allowed = t('and matching logged in user');
     }
     $count = count($this->options['role']);
     if ($count < 1) {
       return $current_user_only_allowed;
     }
     elseif ($count > 1) {
-      return t('Multiple roles') . $current_user_allowed;
+      return t('Multiple roles and matching logged in user');
     }
     else {
       $rids = views_ui_get_roles();
       $rid = reset($this->options['role']);
-      return check_plain($rids[$rid]) . $current_user_allowed;
+      return t('@roles and matching logged in user', array(
+        '@roles' => check_plain($rids[$rid]),
+      ));
     }
   }
 
-  function option_definition() {
+  /**
+   * {@inheritdoc}
+   */
+  public function option_definition() {
     $options = parent::option_definition();
     $options['role'] = array('default' => array());
     $options['contextual_match'] = array('default' => FALSE);
@@ -57,7 +73,10 @@ class badcamp_views_user_and_role_perm_plugin_access_user_and_role extends views
     return $options;
   }
 
-  function options_form(&$form, &$form_state) {
+  /**
+   * {@inheritdoc}
+   */
+  public function options_form(&$form, &$form_state) {
     parent::options_form($form, $form_state);
     $form['contextual_match'] = array(
       '#type' => 'checkbox',
@@ -74,9 +93,13 @@ class badcamp_views_user_and_role_perm_plugin_access_user_and_role extends views
     );
   }
 
-  function options_submit(&$form, &$form_state) {
+  /**
+   * {@inheritdoc}
+   */
+  public function options_submit(&$form, &$form_state) {
     // I hate checkboxes.
     $form_state['values']['access_options']['role'] = array_filter($form_state['values']['access_options']['role']);
     $form_state['values']['access_options']['contextual_match'] = $form_state['values']['access_options']['contextual_match'];
   }
+
 }

@@ -3,7 +3,6 @@ description = This sets the panel page for the sites "Sessions" page
 core = 7.x
 package = BADCamp Pages/Sections
 version = 7.x-2.0-beta9
-project = badcamp_sessions_page
 dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = views

@@ -3,7 +3,6 @@ description = Sets the administration section for "Jobs" section
 core = 7.x
 package = BADCamp Admin
 version = 7.x-1.1
-project = badcamp_jobs_admin
 dependencies[] = ctools
 dependencies[] = views
 features[ctools][] = views:views_default:3.0

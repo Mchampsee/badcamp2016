@@ -3,7 +3,6 @@ description = Main settings and config for the "Basic Page" content type and rel
 core = 7.x
 package = BADCamp Content types
 version = 7.x-2.0-beta1
-project = badcamp_basic_page
 dependencies[] = badcamp_site_config
 dependencies[] = ctools
 dependencies[] = features

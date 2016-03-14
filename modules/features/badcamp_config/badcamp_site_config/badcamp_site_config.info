@@ -3,7 +3,6 @@ description = Basic site configurations including ckeditor, role, text formats, 
 core = 7.x
 package = BADCamp Config
 version = 7.x-1.2
-project = badcamp_site_config
 dependencies[] = ckeditor
 dependencies[] = ctools
 dependencies[] = features

@@ -3,7 +3,6 @@ description = Sets the administration section for "Attendees" section
 core = 7.x
 package = BADCamp Admin
 version = 7.x-1.2
-project = badcamp_attendees_admin
 dependencies[] = ctools
 dependencies[] = views
 dependencies[] = views_bulk_operations

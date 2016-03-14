@@ -3,7 +3,6 @@ description = Main settings and config for the "Scholarship Application" entityf
 core = 7.x
 package = BADCamp Forms
 version = 7.x-2.0-beta1
-project = badcamp_scholarship_application
 dependencies[] = entity
 dependencies[] = entityform
 dependencies[] = features
