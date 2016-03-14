@@ -40,6 +40,7 @@ $conf['master_modules']['base'] = array(
   'field_group',
   'globalredirect',
   'inline_entity_form',
+  'libraries',
   'link',
   'master',
   'metatag',
@@ -50,14 +51,17 @@ $conf['master_modules']['base'] = array(
   'realname',
   'strongarm',
   'token',
+  'user_pages',
   'views',
   'views_bulk_operations',
   'views_content',
 
   // BADCamp features.
+  'badcamp_site_config',
   'feature_badcamp_homepage',
   'feature_badcamp_reports',
-  'feature_badcamp_users',
+  //'feature_badcamp_users',
+  'training_reg_feature',
   // BADCamp custom modules.
 );
 $conf['master_modules']['local'] = array(

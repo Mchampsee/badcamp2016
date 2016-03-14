@@ -6,4 +6,4 @@ version = 7.x-1.1
 configure = admin/config/training_reg
 
 dependencies[] = stripe
-dependencies[] = feature_badcamp_training_reg
+dependencies[] = training_reg_feature
