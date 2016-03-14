@@ -16,8 +16,6 @@ projects:
       branch: "master"
       revision: "65eae19df9aa5b10365b7e059ae3ac9050f702e2"
     patch:
-      # https://www.drupal.org/node/1443308#comment-10329229
-      - "https://www.drupal.org/files/issues/drupal-1443308-49-module_load_include-static-cache.patch"
       # https://www.drupal.org/node/1710656#comment-6304412
       - "https://www.drupal.org/files/drupal-1710656-3-skip-hidden-menu-items-D7.patch"
       # https://www.drupal.org/node/2339447#comment-10354975
@@ -75,9 +73,6 @@ projects:
       - "https://www.drupal.org/files/issues/master-2320641-11-Enable-multiple-modules-at-once.patch"
   metatag:
     version: "1.13"
-    patch:
-      # https://www.drupal.org/node/2603058
-      - "https://www.drupal.org/files/issues/metatag-php_fatal_error_class-2603058-2_0.patch"
   module_filter:
     version: "2.0"
   pathauto:
