@@ -11,8 +11,8 @@ include_once 'badcamp_site_config.features.inc';
  */
 function badcamp_site_config_menu() {
   $items['admin/badcamp'] = array(
-    'title' => t('BADCamp'),
-    'description' => 'Administration section for all things badcamp.',
+    'title' => 'BADCamp',
+    'description' => 'Administration section for all things BADCamp.',
     'page callback' => 'system_admin_menu_block_page',
     'access arguments' => array('access administration pages'),
     'weight' => -9999,
