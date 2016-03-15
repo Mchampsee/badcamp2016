@@ -114,6 +114,8 @@ projects:
     version: "2.23"
   realname:
     version: "1.2"
+  r4032login:
+    version: "1.8"
   smart_trim:
     version: "1.5"
   stripe:

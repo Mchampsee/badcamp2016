@@ -57,7 +57,6 @@ features[variable][] = image_jpeg_quality
 features[variable][] = image_toolkit
 features[variable][] = site_403
 features[variable][] = site_default_country
-features[variable][] = site_frontpage
 features[variable][] = site_mail
 features[variable][] = site_name
 features[variable][] = user_admin_role

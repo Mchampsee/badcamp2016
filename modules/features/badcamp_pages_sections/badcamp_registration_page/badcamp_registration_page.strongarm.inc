@@ -316,7 +316,7 @@ Your account on [site:name] has been canceled.
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_default';
-  $strongarm->value = '/sites/all/themes/badcamp2015/images/badcamp-2015-logo.svg';
+  $strongarm->value = 'sites/all/modules/features/badcamp_config/badcamp_user_profile/images/badcamp-2015-logo.svg';
   $export['user_picture_default'] = $strongarm;
 
   $strongarm = new stdClass();
