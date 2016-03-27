@@ -856,7 +856,7 @@ function training_reg_feature_views_default_views() {
   $handler->display->display_options['fields']['field_user_interest_volunteering']['field'] = 'field_user_interest_volunteering';
   $handler->display->display_options['fields']['field_user_interest_volunteering']['relationship'] = 'field_training_reg_attendee_target_id';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date and Time -  start date (field_training_date_time) */
+  /* Sort criterion: Content: Date and Time (field_training_date_time) */
   $handler->display->display_options['sorts']['field_training_date_time_value']['id'] = 'field_training_date_time_value';
   $handler->display->display_options['sorts']['field_training_date_time_value']['table'] = 'field_data_field_training_date_time';
   $handler->display->display_options['sorts']['field_training_date_time_value']['field'] = 'field_training_date_time_value';

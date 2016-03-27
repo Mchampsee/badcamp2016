@@ -10,7 +10,7 @@
 function badcamp_events_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_event_agenda'
+  // Exported field_base: 'field_event_agenda'.
   $field_bases['field_event_agenda'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_event_date_and_time'
+  // Exported field_base: 'field_event_date_and_time'.
   $field_bases['field_event_date_and_time'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -65,7 +65,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_event_files'
+  // Exported field_base: 'field_event_files'.
   $field_bases['field_event_files'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -91,7 +91,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_event_location'
+  // Exported field_base: 'field_event_location'.
   $field_bases['field_event_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -109,7 +109,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_event_rsvp_more_info'
+  // Exported field_base: 'field_event_rsvp_more_info'.
   $field_bases['field_event_rsvp_more_info'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -131,7 +131,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_event_sponsor'
+  // Exported field_base: 'field_event_sponsor'.
   $field_bases['field_event_sponsor'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -171,7 +171,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_event_type'
+  // Exported field_base: 'field_event_type'.
   $field_bases['field_event_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -200,7 +200,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_event_venue'
+  // Exported field_base: 'field_event_venue'.
   $field_bases['field_event_venue'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -229,7 +229,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_maximum_registration'
+  // Exported field_base: 'field_maximum_registration'.
   $field_bases['field_maximum_registration'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -247,7 +247,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_sold_out'
+  // Exported field_base: 'field_sold_out'.
   $field_bases['field_sold_out'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -275,7 +275,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_summit_leaders'
+  // Exported field_base: 'field_summit_leaders'.
   $field_bases['field_summit_leaders'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -311,7 +311,7 @@ function badcamp_events_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_venue_map'
+  // Exported field_base: 'field_venue_map'.
   $field_bases['field_venue_map'] = array(
     'active' => 1,
     'cardinality' => 1,

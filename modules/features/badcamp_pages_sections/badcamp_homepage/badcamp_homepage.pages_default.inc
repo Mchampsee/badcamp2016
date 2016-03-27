@@ -138,32 +138,6 @@ Berkeley</h2>',
     $display->content['new-8ee2d834-99f2-446d-9108-52703411c8f3'] = $pane;
     $display->panels['middle'][0] = 'new-8ee2d834-99f2-446d-9108-52703411c8f3';
     $pane = new stdClass();
-    $pane->pid = 'new-1417fe3c-317b-4574-876a-e0927b3dc601';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'BADCamp Berkeley logo',
-      'title' => '',
-      'body' => '',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-      'name' => 'badcamp_berkeley_logo',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '1417fe3c-317b-4574-876a-e0927b3dc601';
-    $display->content['new-1417fe3c-317b-4574-876a-e0927b3dc601'] = $pane;
-    $display->panels['middle'][1] = 'new-1417fe3c-317b-4574-876a-e0927b3dc601';
-    $pane = new stdClass();
     $pane->pid = 'new-1a13ca67-36dd-47f3-84da-b9534b32b4ed';
     $pane->panel = 'middle';
     $pane->type = 'custom';
@@ -189,80 +163,11 @@ Berkeley</h2>',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '1a13ca67-36dd-47f3-84da-b9534b32b4ed';
     $display->content['new-1a13ca67-36dd-47f3-84da-b9534b32b4ed'] = $pane;
-    $display->panels['middle'][2] = 'new-1a13ca67-36dd-47f3-84da-b9534b32b4ed';
-    $pane = new stdClass();
-    $pane->pid = 'new-ab9e6f8f-b8d9-4c39-86e5-c1339b0f0ce7';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'BADCamp Facts',
-      'title' => 'BADCamp Facts',
-      'body' => '<div class="fact">
-<h3>$0.00</h3>
-
-<p>never a cost to admission</p>
-</div>
-
-<div class="fact">
-<h3>8</h3>
-
-<p>years of FREE training, summits, sessions and more</p>
-</div>
-
-<div class="fact">
-<h3>1675</h3>
-
-<p>people trained in Drupal since 2007</p>
-</div>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-      'name' => 'badcamp_facts_callout',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = 'ab9e6f8f-b8d9-4c39-86e5-c1339b0f0ce7';
-    $display->content['new-ab9e6f8f-b8d9-4c39-86e5-c1339b0f0ce7'] = $pane;
-    $display->panels['middle'][3] = 'new-ab9e6f8f-b8d9-4c39-86e5-c1339b0f0ce7';
-    $pane = new stdClass();
-    $pane->pid = 'new-0530de1f-a3cc-412b-b36c-2175ba2af680';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'BADCamp People grid',
-      'title' => '',
-      'body' => '',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-      'name' => 'badcamp_people_grid',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $pane->uuid = '0530de1f-a3cc-412b-b36c-2175ba2af680';
-    $display->content['new-0530de1f-a3cc-412b-b36c-2175ba2af680'] = $pane;
-    $display->panels['middle'][4] = 'new-0530de1f-a3cc-412b-b36c-2175ba2af680';
+    $display->panels['middle'][1] = 'new-1a13ca67-36dd-47f3-84da-b9534b32b4ed';
     $pane = new stdClass();
     $pane->pid = 'new-5bb0f75f-0d93-49a3-8746-62b0b0420dc5';
     $pane->panel = 'middle';
@@ -280,11 +185,11 @@ Berkeley</h2>',
       'css_class' => 'badcamp-sponsors-thank-you core-sponsor',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '5bb0f75f-0d93-49a3-8746-62b0b0420dc5';
     $display->content['new-5bb0f75f-0d93-49a3-8746-62b0b0420dc5'] = $pane;
-    $display->panels['middle'][5] = 'new-5bb0f75f-0d93-49a3-8746-62b0b0420dc5';
+    $display->panels['middle'][2] = 'new-5bb0f75f-0d93-49a3-8746-62b0b0420dc5';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

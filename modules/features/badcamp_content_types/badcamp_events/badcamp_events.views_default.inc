@@ -206,7 +206,7 @@ Registration is first come, first served and part of the BADCamp registration pr
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Learn more';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Event date and time -  start date (field_event_date_and_time) */
+  /* Sort criterion: Content: Event date and time (field_event_date_and_time) */
   $handler->display->display_options['sorts']['field_event_date_and_time_value']['id'] = 'field_event_date_and_time_value';
   $handler->display->display_options['sorts']['field_event_date_and_time_value']['table'] = 'field_data_field_event_date_and_time';
   $handler->display->display_options['sorts']['field_event_date_and_time_value']['field'] = 'field_event_date_and_time_value';

@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function badcamp_sessions_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,7 +38,7 @@ function badcamp_sessions_field_group_info() {
       ),
     ),
   );
-  $export['group_session_administration|node|session|form'] = $field_group;
+  $field_groups['group_session_administration|node|session|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function badcamp_sessions_field_group_info() {
       ),
     ),
   );
-  $export['group_session_description|node|session|form'] = $field_group;
+  $field_groups['group_session_description|node|session|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -93,7 +93,7 @@ function badcamp_sessions_field_group_info() {
       ),
     ),
   );
-  $export['group_session_files_video|node|session|form'] = $field_group;
+  $field_groups['group_session_files_video|node|session|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -123,7 +123,14 @@ function badcamp_sessions_field_group_info() {
       ),
     ),
   );
-  $export['group_session_information|node|session|form'] = $field_group;
+  $field_groups['group_session_information|node|session|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Session administration');
+  t('Session description');
+  t('Session files/video');
+  t('Session information');
+
+  return $field_groups;
 }

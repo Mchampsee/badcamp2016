@@ -10,7 +10,7 @@
 function training_reg_feature_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-training-body'
+  // Exported field_instance: 'node-training-body'.
   $field_instances['node-training-body'] = array(
     'bundle' => 'training',
     'default_value' => NULL,
@@ -55,7 +55,7 @@ function training_reg_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training-field_skill_level'
+  // Exported field_instance: 'node-training-field_skill_level'.
   $field_instances['node-training-field_skill_level'] = array(
     'bundle' => 'training',
     'default_value' => NULL,
@@ -92,9 +92,10 @@ function training_reg_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training-field_training_date_time'
+  // Exported field_instance: 'node-training-field_training_date_time'.
   $field_instances['node-training-field_training_date_time'] = array(
     'bundle' => 'training',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -153,12 +154,12 @@ function training_reg_feature_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-training-field_training_location'
+  // Exported field_instance: 'node-training-field_training_location'.
   $field_instances['node-training-field_training_location'] = array(
     'bundle' => 'training',
     'default_value' => NULL,
@@ -196,7 +197,7 @@ function training_reg_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training-field_training_max_registrations'
+  // Exported field_instance: 'node-training-field_training_max_registrations'.
   $field_instances['node-training-field_training_max_registrations'] = array(
     'bundle' => 'training',
     'default_value' => NULL,
@@ -236,7 +237,7 @@ function training_reg_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training-field_training_room'
+  // Exported field_instance: 'node-training-field_training_room'.
   $field_instances['node-training-field_training_room'] = array(
     'bundle' => 'training',
     'default_value' => NULL,
@@ -274,7 +275,7 @@ function training_reg_feature_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'training_reg-training_reg-field_training_reg_attendee'
+  // 'training_reg-training_reg-field_training_reg_attendee'.
   $field_instances['training_reg-training_reg-field_training_reg_attendee'] = array(
     'bundle' => 'training_reg',
     'default_value' => NULL,
@@ -318,7 +319,7 @@ function training_reg_feature_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'training_reg-training_reg-field_training_reg_refunded'
+  // 'training_reg-training_reg-field_training_reg_refunded'.
   $field_instances['training_reg-training_reg-field_training_reg_refunded'] = array(
     'bundle' => 'training_reg',
     'default_value' => array(
@@ -362,7 +363,7 @@ function training_reg_feature_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'training_reg-training_reg-field_training_reg_stripe_trans'
+  // 'training_reg-training_reg-field_training_reg_stripe_trans'.
   $field_instances['training_reg-training_reg-field_training_reg_stripe_trans'] = array(
     'bundle' => 'training_reg',
     'default_value' => NULL,
@@ -429,7 +430,7 @@ function training_reg_feature_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'training_reg-training_reg-field_training_reg_training'
+  // 'training_reg-training_reg-field_training_reg_training'.
   $field_instances['training_reg-training_reg-field_training_reg_training'] = array(
     'bundle' => 'training_reg',
     'default_value' => NULL,
