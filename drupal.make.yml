@@ -23,6 +23,8 @@ projects:
       # https://www.drupal.org/node/1443342#comment-5613306
       - "https://www.drupal.org/files/drupal-1443342-1-inline-file_uri_scheme-in-file_stream_wrapper_uri_normalize.patch"
   # Projects.
+  addressfield:
+    version: "1.2"
   admin_menu:
     version: "3.0-rc5"
   admin_views:
@@ -40,8 +42,14 @@ projects:
       - "https://www.drupal.org/files/issues/date-php_fatal_error_class-2611968-2.patch"
   diff:
     version: "3.2"
+  eck:
+    version: "2.0-rc8"
+  elements:
+    version: "1.4"
   entity:
     version: "1.6"
+  entityform:
+    version: "2.0-rc1"
   entityreference:
     version: "1.1"
     patch:
@@ -51,12 +59,28 @@ projects:
       - "https://www.drupal.org/files/issues/entityreference-undefined_index-1823406-14.patch"
       # https://www.drupal.org/node/1836106
       - "https://www.drupal.org/files/issues/entityreference-1836106-20.patch"
+  environment_indicator:
+    version: "2.8"
   field_group:
     version: "1.5"
+  field_permissions:
+    version: "1.0-beta2"
   features:
     version: "2.7"
+  flag:
+    version: "3.7"
+  geocoder:
+    version: "1.3"
+  geofield:
+    version: "2.3"
+  geophp:
+    version: "1.7"
   globalredirect:
     version: "1.5"
+  html5_tools:
+    version: "1.3"
+  image_link_formatter:
+    version: "1.0"
   inline_entity_form:
     version: "1.6"
   libraries:
@@ -66,6 +90,10 @@ projects:
     patch:
       # https://www.drupal.org/node/2612176
       - "https://www.drupal.org/files/issues/link-php_fatal_error_class-2612176-2.patch"
+  logintoboggan:
+    version: "1.5"
+  mailchimp:
+    version: "3.6"
   master:
     version: "2.0-beta4"
     patch:
@@ -86,20 +114,30 @@ projects:
     version: "2.23"
   realname:
     version: "1.2"
+  r4032login:
+    version: "1.8"
+  smart_trim:
+    version: "1.5"
   stripe:
     download:
       type: "git"
       url: "https://git.drupal.org/project/stripe.git"
       branch: "7.x-1.x"
-      revision: "b86abe18101b200a83d6aef5c6729ae77d8add44"
+      revision: "9cd7d7356b6429498f447aa112811c6e8b03a3e5"
   strongarm:
     version: "2.0"
+  textformatter:
+    version: "1.4"
   token:
     version: "1.6"
+  user_pages:
+    version: "1.0"
   views:
     version: "3.13"
   views_bulk_operations:
     version: "3.3"
+  youtube:
+    version: "1.6"
   # Themes.
   adminimal_theme:
     version: "1.24"
@@ -109,3 +147,16 @@ libraries:
     download:
       type: "file"
       url: "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.5.4/ckeditor_4.5.4_standard.zip"
+  mailchimp:
+    download:
+      type: "git"
+      url: "https://bitbucket.org/mailchimp/mailchimp-api-php.git"
+      branch: "master"
+      revision: "03ae0dba64d1a902fb4d76004ef12c8391ededc8"
+  stripe:
+    download:
+      type: "git"
+      url: "https://github.com/stripe/stripe-php.git"
+      branch: "master"
+      revision: "ab77a057b656ace011b2033833d566f7e62666bf"
+

@@ -3,7 +3,6 @@ description = This sets the panel page for the sites "Community" page
 core = 7.x
 package = BADCamp Pages/Sections
 version = 7.x-2.0-beta1
-project = badcamp_community_page
 dependencies[] = ctools
 dependencies[] = ctools_custom_content
 dependencies[] = page_manager

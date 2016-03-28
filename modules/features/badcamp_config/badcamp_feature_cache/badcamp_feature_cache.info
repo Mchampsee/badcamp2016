@@ -3,7 +3,6 @@ description = Production caching and performance settings
 core = 7.x
 package = BADCamp Config
 version = 7.x-1.0
-project = badcamp_feature_cache
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

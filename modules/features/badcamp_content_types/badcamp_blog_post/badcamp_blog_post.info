@@ -3,7 +3,6 @@ description = Main settings and config for the "Blog post" content type and rela
 core = 7.x
 package = BADCamp Content types
 version = 7.x-2.0
-project = badcamp_blog_post
 dependencies[] = badcamp_site_config
 dependencies[] = ctools
 dependencies[] = features

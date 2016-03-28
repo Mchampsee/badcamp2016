@@ -10,7 +10,7 @@
 function badcamp_events_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-body'
+  // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -81,7 +81,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_agenda'
+  // Exported field_instance: 'node-event-field_event_agenda'.
   $field_instances['node-event-field_event_agenda'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -147,9 +147,10 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_date_and_time'
+  // Exported field_instance: 'node-event-field_event_date_and_time'.
   $field_instances['node-event-field_event_date_and_time'] = array(
     'bundle' => 'event',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -208,12 +209,12 @@ function badcamp_events_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-0:+0',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_files'
+  // Exported field_instance: 'node-event-field_event_files'.
   $field_instances['node-event-field_event_files'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -269,7 +270,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_location'
+  // Exported field_instance: 'node-event-field_event_location'.
   $field_instances['node-event-field_event_location'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -320,7 +321,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_rsvp_more_info'
+  // Exported field_instance: 'node-event-field_event_rsvp_more_info'.
   $field_instances['node-event-field_event_rsvp_more_info'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -386,7 +387,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_sponsor'
+  // Exported field_instance: 'node-event-field_event_sponsor'.
   $field_instances['node-event-field_event_sponsor'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -425,7 +426,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_type'
+  // Exported field_instance: 'node-event-field_event_type'.
   $field_instances['node-event-field_event_type'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -461,7 +462,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_venue'
+  // Exported field_instance: 'node-event-field_event_venue'.
   $field_instances['node-event-field_event_venue'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -497,7 +498,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_maximum_registration'
+  // Exported field_instance: 'node-event-field_maximum_registration'.
   $field_instances['node-event-field_maximum_registration'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -543,7 +544,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_sold_out'
+  // Exported field_instance: 'node-event-field_sold_out'.
   $field_instances['node-event-field_sold_out'] = array(
     'bundle' => 'event',
     'default_value' => array(
@@ -586,7 +587,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_summit_leaders'
+  // Exported field_instance: 'node-event-field_summit_leaders'.
   $field_instances['node-event-field_summit_leaders'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -664,7 +665,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-venue-field_event_location'
+  // Exported field_instance: 'taxonomy_term-venue-field_event_location'.
   $field_instances['taxonomy_term-venue-field_event_location'] = array(
     'bundle' => 'venue',
     'default_value' => NULL,
@@ -715,7 +716,7 @@ function badcamp_events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-venue-field_venue_map'
+  // Exported field_instance: 'taxonomy_term-venue-field_venue_map'.
   $field_instances['taxonomy_term-venue-field_venue_map'] = array(
     'bundle' => 'venue',
     'default_value' => array(),

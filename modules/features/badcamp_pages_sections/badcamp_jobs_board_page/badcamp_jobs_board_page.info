@@ -3,7 +3,6 @@ description = This sets the panel page for the sites "Jobs Board" page
 core = 7.x
 package = BADCamp Pages/Sections
 version = 7.x-2.0-beta1
-project = badcamp_jobs_board_page
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = page_manager

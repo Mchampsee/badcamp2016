@@ -502,8 +502,6 @@ function badcamp_sessions_page_views_default_views() {
     4 => 0,
     6 => 0,
   );
-  $handler->display->display_options['filters']['field_session_date_and_time_value']['form_type'] = 'date_popup';
-  $handler->display->display_options['filters']['field_session_date_and_time_value']['year_range'] = '-0:+0';
   /* Filter criterion: Content: Session time slot (field_session_time_slot) */
   $handler->display->display_options['filters']['field_session_time_slot_tid']['id'] = 'field_session_time_slot_tid';
   $handler->display->display_options['filters']['field_session_time_slot_tid']['table'] = 'field_data_field_session_time_slot';

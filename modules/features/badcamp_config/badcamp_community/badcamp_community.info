@@ -3,7 +3,6 @@ description = Configuration related to things like attendees
 core = 7.x
 package = BADCamp Config
 version = 7.x-1.4
-project = badcamp_community
 dependencies[] = ctools
 dependencies[] = image
 dependencies[] = views

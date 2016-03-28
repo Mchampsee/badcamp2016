@@ -3,7 +3,6 @@ description = Builds the flag entity and view for "My Schedule" Section
 core = 7.x
 package = BADCamp Flags
 version = 7.x-1.7
-project = badcamp_my_schedule
 dependencies[] = badcamp_views_user_and_role_perm
 dependencies[] = ctools
 dependencies[] = features

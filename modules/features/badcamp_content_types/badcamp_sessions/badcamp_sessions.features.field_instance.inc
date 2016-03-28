@@ -84,6 +84,7 @@ function badcamp_sessions_field_default_field_instances() {
   // Exported field_instance: 'node-session-field_session_date_and_time'.
   $field_instances['node-session-field_session_date_and_time'] = array(
     'bundle' => 'session',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -133,7 +134,7 @@ function badcamp_sessions_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-0:+0',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => 12,
     ),
   );

@@ -30,6 +30,7 @@ function training_reg_feature_eck_bundle_info() {
       'entity_type' => 'training_reg',
       'name' => 'training_reg',
       'label' => 'Training Registration',
+      'config' => array(),
     ),
   );
   return $items;

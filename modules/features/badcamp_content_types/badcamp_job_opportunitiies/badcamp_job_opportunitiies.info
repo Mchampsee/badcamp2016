@@ -3,7 +3,6 @@ description = Main settings and config for the "Job postings" content type and r
 core = 7.x
 package = BADCamp Content types
 version = 7.x-2.0-beta6
-project = badcamp_job_opportunitiies
 dependencies[] = badcamp_site_config
 dependencies[] = ctools
 dependencies[] = entityreference

@@ -10,7 +10,7 @@
 function training_reg_feature_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_skill_level'
+  // Exported field_base: 'field_skill_level'.
   $field_bases['field_skill_level'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,7 +39,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_training_date_time'
+  // Exported field_base: 'field_training_date_time'.
   $field_bases['field_training_date_time'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -69,7 +69,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_training_location'
+  // Exported field_base: 'field_training_location'.
   $field_bases['field_training_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -98,7 +98,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_training_max_registrations'
+  // Exported field_base: 'field_training_max_registrations'.
   $field_bases['field_training_max_registrations'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -113,7 +113,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_training_reg_attendee'
+  // Exported field_base: 'field_training_reg_attendee'.
   $field_bases['field_training_reg_attendee'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -141,7 +141,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_training_reg_refunded'
+  // Exported field_base: 'field_training_reg_refunded'.
   $field_bases['field_training_reg_refunded'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -169,7 +169,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_training_reg_stripe_trans'
+  // Exported field_base: 'field_training_reg_stripe_trans'.
   $field_bases['field_training_reg_stripe_trans'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -193,7 +193,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_training_reg_training'
+  // Exported field_base: 'field_training_reg_training'.
   $field_bases['field_training_reg_training'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -225,7 +225,7 @@ function training_reg_feature_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_training_room'
+  // Exported field_base: 'field_training_room'.
   $field_bases['field_training_room'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -19,7 +19,7 @@ function badcamp_homepage_default_ctools_custom_content() {
   $content->category = 'BADCamp';
   $content->settings = array(
     'admin_title' => 'BADCamp Introduction',
-    'title' => 'ABOUT',
+    'title' => 'About',
     'body' => '<div class="panel-pane pane-custom pane-3 blue">
 <div class="pane-content">
 <p>BADCamp is a technology conference for the people, an annual celebration of the web, open-source software, and the creators who make it all possible. Join us this fall for four days of talks, trainings, summits, sprints and socials with some of the brightest minds from all over the world.</p>
@@ -27,7 +27,7 @@ function badcamp_homepage_default_ctools_custom_content() {
 </div>
 ',
     'format' => 'full_html',
-    'substitute' => 1,
+    'substitute' => 0,
   );
   $export['badcamp_introduction_callout'] = $content;
 
@@ -40,19 +40,13 @@ function badcamp_homepage_default_ctools_custom_content() {
   $content->category = 'BADCamp';
   $content->settings = array(
     'admin_title' => 'Main Title callout',
-    'title' => '',
-    'body' => '<h2 class="pane-title">Bay Area<br />
-Drupal Camp</h2>
+    'title' => 'Bay Area Drupal Camp 2016',
+    'body' => '<p>Location: Planet Earth, Berkeley, CA, 37°52\'18.8358"N, -122°15\'38.6388"W</p>
 
-<h2 class="pane-title">2015<br />
-October 22 - 25</h2>
-
-<h2 class="pane-title">University of<br />
-California,<br />
-Berkeley</h2>
+<p>Date: 2016.10.20 - 2016.10.23</p>
 ',
     'format' => 'full_html',
-    'substitute' => 1,
+    'substitute' => 0,
   );
   $export['badcamp_main_title_callout'] = $content;
 

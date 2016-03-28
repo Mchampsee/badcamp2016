@@ -300,13 +300,6 @@ function badcamp_site_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'home';
-  $export['site_frontpage'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
   $strongarm->value = 'info@badcamp.net';
   $export['site_mail'] = $strongarm;
@@ -317,13 +310,6 @@ function badcamp_site_config_strongarm() {
   $strongarm->name = 'site_name';
   $strongarm->value = 'BADCamp 2015 - Bay Area Drupal Camp';
   $export['site_name'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'theme_default';
-  $strongarm->value = 'badcamp2015';
-  $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
