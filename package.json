@@ -14,5 +14,10 @@
     "sync-exec": "^0.6.2",
     "minimist": "^1.2.0",
     "gulp-if": "^2.0.0"
+  },
+  "scripts": {
+    "aquifer": "aquifer",
+    "gulp": "gulp",
+    "clean": "rm -rf node_modules .aquifer"
   }
 }
