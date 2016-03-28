@@ -81,15 +81,6 @@ function badcamp_news_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'blog_post' => 'blog_post',
   );
-  /* Filter criterion: Content: Tags (field_blog_tags) */
-  $handler->display->display_options['filters']['field_blog_tags_tid']['id'] = 'field_blog_tags_tid';
-  $handler->display->display_options['filters']['field_blog_tags_tid']['table'] = 'field_data_field_blog_tags';
-  $handler->display->display_options['filters']['field_blog_tags_tid']['field'] = 'field_blog_tags_tid';
-  $handler->display->display_options['filters']['field_blog_tags_tid']['value'] = array(
-    58 => '58',
-  );
-  $handler->display->display_options['filters']['field_blog_tags_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_blog_tags_tid']['vocabulary'] = 'blog_tags';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -170,6 +161,12 @@ function badcamp_news_feature_views_default_views() {
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
   $handler->display->display_options['path'] = 'news';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'News';
+  $handler->display->display_options['menu']['weight'] = '60';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');

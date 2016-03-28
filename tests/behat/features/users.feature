@@ -23,34 +23,26 @@ Feature: Users can create an account.
     Then I should see "E-mail address field is required."
 
     When I enter "username@example.com" for "E-mail address"
+    And I enter "username@example.com" for "Confirm e-mail address"
     And I press the "Create new account" button
-    Then I should see "First Name field is required."
+    Then I should see "First name field is required."
 
-    When I enter "Generic" for "First Name"
+    When I enter "Generic" for "First name"
     And I press the "Create new account" button
     Then I should see "Last Name field is required."
 
-    When I enter "Name" for "Last Name"
+    When I enter "Name" for "Last name"
+    And I enter "testtest" for "pass[pass1]"
+    And I enter "testtest" for "pass[pass2]"
     And I press the "Create new account" button
-    Then I should see "A welcome message with further instructions has been sent to your e-mail address."
-
-    When I run drush "cron"
-    Then the email to "username@example.com" should contain "Thank you for registering"
-
-    When I follow the email URL matching regex "/http:\/\/.*\/user\/reset\/.*/"
-    And I press "Log in"
-    Then I should see the success message "You have just used your one-time login link"
-
-    When I enter "test" for "Password"
-    And I enter "test" for "Confirm password"
-    And I press "Save"
-    Then I should see the success message "The changes have been saved."
+    Then I should see "Further instructions have been sent to your e-mail address."
 
     When I am at "user/logout"
     And I am at "user/login"
     And I enter "test" for "Username"
-    And I enter "test" for "Password"
+    And I enter "testtest" for "Password"
     And I press "Log in"
+    And print last response
     Then I should see "Member for"
 
     # Cleanup.

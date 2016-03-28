@@ -35,9 +35,9 @@ function badcamp_registration_page_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Registration',
+    'title' => 'Register',
     'name' => 'main-menu',
-    'weight' => '-100',
+    'weight' => '100',
     'parent' => array(
       'type' => 'none',
       'title' => '',

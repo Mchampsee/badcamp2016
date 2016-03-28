@@ -24,7 +24,7 @@ function badcamp_community_page_default_page_manager_pages() {
     'type' => 'normal',
     'title' => 'Community',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '90',
     'parent' => array(
       'type' => 'none',
       'title' => '',

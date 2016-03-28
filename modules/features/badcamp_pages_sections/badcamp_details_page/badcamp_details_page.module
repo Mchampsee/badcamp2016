@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the BADCamp Details page feature.
- */
-
-include_once 'badcamp_details_page.features.inc';
