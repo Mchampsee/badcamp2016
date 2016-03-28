@@ -42,7 +42,6 @@ Feature: Users can create an account.
     And I enter "test" for "Username"
     And I enter "testtest" for "Password"
     And I press "Log in"
-    And print last response
     Then I should see "Member for"
 
     # Cleanup.
@@ -70,7 +69,7 @@ Feature: Users can create an account.
   @profile
   Scenario: Users can add an image
     Given users:
-      | name | mail | field_name_first | field_name_last |
+      | name | mail | field_user_first_name | field_user_last_name |
       | genevieve | marie@peck.com | Genevieve | Peck |
     And I am logged in as "genevieve"
     When I visit "/user/"
