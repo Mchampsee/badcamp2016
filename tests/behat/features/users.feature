@@ -90,3 +90,7 @@ Feature: Users can create an account.
   Scenario: Users can find other users
     When I visit "/attendees"
     Then I should see "Displaying"
+
+  Scenario: Users can view the style guide
+    When I visit "/admin/appearance/styleguide"
+    Then I should see "Style guide"
